@@ -184,12 +184,6 @@ export function start() {
     wasm.start();
 }
 
-/**
-*/
-export function update() {
-    wasm.update();
-}
-
 function isLikeNone(x) {
     return x === undefined || x === null;
 }
@@ -246,32 +240,25 @@ export function __wbg_stroke_85dee7d87c4a6ead(arg0) {
     getObject(arg0).stroke();
 };
 
-export function __wbg_arc_30e550c408f151ac() { return handleError(function (arg0, arg1, arg2, arg3, arg4, arg5) {
-    getObject(arg0).arc(arg1, arg2, arg3, arg4, arg5);
+export function __wbg_lineTo_dbe49320dd6e392a(arg0, arg1, arg2) {
+    getObject(arg0).lineTo(arg1, arg2);
+};
+
+export function __wbg_moveTo_15a09390bee05586(arg0, arg1, arg2) {
+    getObject(arg0).moveTo(arg1, arg2);
+};
+
+export function __wbg_restore_556d7c38c007b3fe(arg0) {
+    getObject(arg0).restore();
+};
+
+export function __wbg_rotate_4ee681cf0dd9841a() { return handleError(function (arg0, arg1) {
+    getObject(arg0).rotate(arg1);
 }, arguments) };
 
-export function __wbg_clearRect_b3895f56c5ecd19d(arg0, arg1, arg2, arg3, arg4) {
-    getObject(arg0).clearRect(arg1, arg2, arg3, arg4);
-};
-
-export function __wbg_instanceof_HtmlInputElement_970e4026de0fccff(arg0) {
-    let result;
-    try {
-        result = getObject(arg0) instanceof HTMLInputElement;
-    } catch {
-        result = false;
-    }
-    const ret = result;
-    return ret;
-};
-
-export function __wbg_value_b2a620d34c663701(arg0, arg1) {
-    const ret = getObject(arg1).value;
-    const ptr0 = passStringToWasm0(ret, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
-    const len0 = WASM_VECTOR_LEN;
-    getInt32Memory0()[arg0 / 4 + 1] = len0;
-    getInt32Memory0()[arg0 / 4 + 0] = ptr0;
-};
+export function __wbg_translate_ee7d176c35f20054() { return handleError(function (arg0, arg1, arg2) {
+    getObject(arg0).translate(arg1, arg2);
+}, arguments) };
 
 export function __wbg_instanceof_HtmlCanvasElement_97761617af6ea089(arg0) {
     let result;
@@ -281,16 +268,6 @@ export function __wbg_instanceof_HtmlCanvasElement_97761617af6ea089(arg0) {
         result = false;
     }
     const ret = result;
-    return ret;
-};
-
-export function __wbg_width_2f4b0cbbf1c850d9(arg0) {
-    const ret = getObject(arg0).width;
-    return ret;
-};
-
-export function __wbg_height_a81d308a000d91d0(arg0) {
-    const ret = getObject(arg0).height;
     return ret;
 };
 
